@@ -34,8 +34,8 @@ function Copyright() {
 
 const cards = [
   { title: "big", desc: "beeeeeeeeeeeeeeeeeeeeean" },
-  { title: "ben" },
-  3,
+  { title: "ben", desc: "please stop" },
+  { title: "ben", desc: "ok sir" },
 ];
 
 const theme = createTheme();
@@ -154,7 +154,7 @@ export default function Album() {
           {/* End hero unit */}
           <Grid container spacing={2}>
             {cards.map((card) => (
-              <Grid item key={card} xs={12} sm={6} md={4}>
+              <Grid item xs={12} sm={6} md={4}>
                 <Card
                   sx={{
                     height: "100%",
