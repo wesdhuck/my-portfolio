@@ -32,11 +32,7 @@ function Copyright() {
   );
 }
 
-const cards = [
-  { title: "big", desc: "beeeeeeeeeeeeeeeeeeeeean" },
-  { title: "ben", desc: "please stop" },
-  { title: "ben", desc: "ok sir" },
-];
+const cards = [{ title: "big" }, { title: "ben" }, { title: "ben" }];
 
 const theme = createTheme();
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
@@ -83,7 +79,7 @@ export default function Album() {
               textShadow: " 1px 1px 2px black",
             }}
           >
-            👋 Wesley's Portfolio
+            👋 Wesley&apos;s Portfolio
           </Typography>
           <IconButton onClick={colorMode.toggleColorMode} color="inherit">
             {theme.palette.mode === "dark" ? (
@@ -134,10 +130,10 @@ export default function Album() {
               color="text.secondary"
               paragraph
             >
-              I've been working withing the marketing tech realm for 5+ years
-              has lead me to grow a particular set of skills that range from
-              growth hacking paid advertisement to reporting using google
-              cloud's Big Query and developing my webapps.
+              I&apos;ve been working withing the marketing tech realm for 5+
+              years has lead me to grow a particular set of skills that range
+              from growth hacking paid advertisement to reporting using google
+              cloud&apos;s Big Query and developing my webapps.
             </Typography>
             <Stack
               sx={{ pt: 4 }}
@@ -154,7 +150,7 @@ export default function Album() {
           {/* End hero unit */}
           <Grid container spacing={2}>
             {cards.map((card) => (
-              <Grid item xs={12} sm={6} md={4}>
+              <Grid item xs={12} sm={6} md={4} key={card.title}>
                 <Card
                   sx={{
                     height: "100%",
@@ -170,7 +166,6 @@ export default function Album() {
                     <Typography gutterBottom variant="h5" component="h2">
                       {card.title}
                     </Typography>
-                    <Typography>{card.desc}</Typography>
                   </CardContent>
                   <CardActions>
                     <Button size="small">View</Button>
