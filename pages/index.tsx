@@ -32,7 +32,11 @@ function Copyright() {
   );
 }
 
-const cards = [{ title: "big", desc: "hello cunt" }, { title: "ben" }, 3];
+const cards = [
+  { title: "big", desc: "beeeeeeeeeeeeeeeeeeeeean" },
+  { title: "ben" },
+  3,
+];
 
 const theme = createTheme();
 const ColorModeContext = React.createContext({ toggleColorMode: () => {} });
